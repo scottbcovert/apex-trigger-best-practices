@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Apex Trigger Development - Best Practices</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="Apex Trigger Best Practices">
+		<meta name="author" content="Scott B Covert">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -38,340 +38,309 @@
 
 		<div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
+					<h1>Apex Trigger Development</h1>
+					<h3>Best Practices</h3>
+					<p><small>Presented by Scott Covert / <a href="https://twitter.com/scottbcovert">@scottbcovert</a></small></p>
 				</section>
 
 				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
+					<h2>Intro</h2>
+					<p>Umm, my workflow rule can't do that-what should I do?</p>
+					<img src="http://memecrunch.com/meme/5942Y/apex-trigger/image.gif?w=500&c=1"/>
 				</section>
 
-				<!-- Example of nested vertical slides -->
 				<section>
 					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
+						<h2>Common Issues</h2>
+						<p>The world of Apex development ain't all sunshine and rainbows.</p>
+						<img src="http://cdn.meme.am/instances/500x/36001409.jpg"/>
 					</section>
 					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+						<h2>Context</h2>
+						<p>Should my logic live in a before or after trigger?</p>
+						<p>Null reference? I thought all records have ids?</p>
 					</section>
 					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
+						<h2>Bulk DML Operations</h2>
+						<p>Umm, you mean you want to insert more than a single account at once?</p>
 					</section>
 					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
+						<h2>SOQL inside For Loops</h2>
+						<p>...what's a governor limit?</p>
 					</section>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
+					<section>
+						<h2>Logic inside Triggers</h2>
+						<p>Unit tests?</p>
+					</section>
+					<section>
+						<h2>Multiple Triggers per Object</h2>
+						<img src="http://cdn.meme.am/instances/500x/59330053.jpg"/>
+					</section>
+					<section>
+						<h2>Recursion</h2>
+						<img height="550px" src="http://caseelse.net/wp-content/uploads/2008/05/recursionagain.jpg"/>
+					</section>
+					<section>
+						<h2>Spaghetti Code</h2>
+						<p>...but it's sorta working</p>
+					</section>
 				</section>
 
 				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
+					<section>
+						<h2>Best Practices</h2>
+						<img height="550px" src="http://www.sqlsoldier.com/wp/wp-content/uploads/2012/02/BestPractices.jpg"/>
 					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
+					<section>
+						<h2>Context</h2>
+						<p>Before:</p>
+						<ul>
+							<li>Set/change field values before writing to database</li>
+							<li>No Id value yet for Insert triggers</li>
+						</ul>
+						<p>After:</p>
+						<ul>
+							<li>Id values can be safely mapped</li>
+						</ul>
+						<p>Insert:</p>
+						<ul>
+							<li>No Trigger.old or Trigger.oldMap</li>
+						</ul>
+						<p>Update:</p>
+						<ul>
+							<li>Can update original object (be careful of recursion)</li>
+						</ul>
 					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
+					<section>
+						<h2>Context Cheat Sheets</h2>
+						<p><a href="https://www.salesforce.com/us/developer/docs/apexcode/Content/apex_triggers_context_variables.htm">Trigger Context Variables</a></p>
+						<p><a href="https://www.salesforce.com/us/developer/docs/apexcode/Content/apex_triggers_context_variables_considerations.htm">Context Variable Considerations</a></p>
 					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
+					<section>
+						<h2>Bulkification</h2>
+						<img src="https://pbs.twimg.com/media/BLhjL36CUAA3HWc.jpg"/>
 					</section>
-				</section>
+					<section>
+						<h2>Don't Do This!</h2>
+						<pre><code data-trim contenteditable>
+trigger accountTestTrggr on Account (before insert, before update) {
 
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code>Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
-
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
+   //This only handles the first record in the Trigger.new collection
+   //But if more than 1 Account initiated this trigger, those additional records
+   //will not be processed
+   Account acct = Trigger.new[0];
+   List<Contact> contacts = [select id, salutation, firstname, lastname, email 
+              from Contact where accountId = :acct.Id];
+   
+}
+						</code></pre>
+					</section>
+					<section>
+					<h2>Bulkified Trigger</h2>
 					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+trigger accountTestTrggr on Account (before insert, before update) {
 
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
+   List<String> accountNames = new List<String>{};
+ 
+   //Loop through all records in the Trigger.new collection
+   for(Account a: Trigger.new){
+      //Concatenate the Name and billingState into the Description field
+      a.Description = a.Name + ':' + a.BillingState
+   }
+   
 }
 					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+					</section>
+					<section>
+						<h2>Bulkification Cheat Sheet</h2>
+						<p><a href="https://developer.salesforce.com/page/Best_Practice%3A_Bulkify_Your_Code">Bulkify Your Code</a></p>
+					</section>
+					<section>
+						<h2>No SOQL in For Loops</h2>
+						<p>.</p>
+					</section>
+					<section>
+						<h2>Don't Do This!</h2>
+						<pre><code data-trim contenteditable>
+trigger accountTestTrggr on Account (before insert, before update) {
+	  
+      //For loop to iterate through all the incoming Account records
+      for(Account a: Trigger.new){
+      	  /*
+      	    THIS FOLLOWING QUERY IS INEFFICIENT AND DOESN'T SCALE
+      	    Since the SOQL Query for related Contacts is within the FOR loop, if this trigger is initiated 
+      	    with more than 20 records, the trigger will exceed the trigger governor limit
+            of maximum 20 SOQL Queries.
+      	  */
+      	  List<Contact> contacts = [select id, salutation, firstname, lastname, email 
+                        from Contact where accountId = :a.Id];
+ 		  
+ 	  for(Contact c: contacts){
+ 	  	  System.debug('Contact Id[' + c.Id + '], FirstName[' + c.firstname + '], 
+                                         LastName[' + c.lastname +']');
+ 	  	  c.Description=c.salutation + ' ' + c.firstName + ' ' + c.lastname;
+ 	  	   /*
+      	             THIS FOLLOWING DML STATEMENT IS INEFFICIENT AND DOESN'T SCALE
+      	             Since the UPDATE dml operation is within the FOR loop, if this trigger is initiated 
+      	             with more than 20 records, the trigger will exceed the trigger governor limit 
+                     of maximum 20 DML Operations.
+      	            */
+      	      
+ 		  update c;
+ 	  }    	  
+      }
+}
+						</code></pre>
+					</section>
+					<section>
+						<h2>Relationship Queries and Maps are Your Friends</h2>
+						<pre><code data-trim contenteditable>
+trigger accountTestTrggr on Account (before insert, before update) {
+  //This queries all Contacts related to the incoming Account records in a single SOQL query.
+  //This is also an example of how to use child relationships in SOQL
+  List<Account> accountsWithContacts = [select id, name, (select id, salutation, description, 
+                                                                firstname, lastname, email from Contacts) 
+                                                                from Account where Id IN :Trigger.newMap.keySet()];
+	  
+  List<Contact> contactsToUpdate = new List<Contact>{};
+  // For loop to iterate through all the queried Account records 
+  for(Account a: accountsWithContacts){
+     // Use the child relationships dot syntax to access the related Contacts
+     for(Contact c: a.Contacts){
+   	  System.debug('Contact Id[' + c.Id + '], FirstName[' + c.firstname + '], LastName[' + c.lastname +']');
+   	  c.Description=c.salutation + ' ' + c.firstName + ' ' + c.lastname; 
+   	  contactsToUpdate.add(c);
+     }    	  
+   }
+      
+   //Now outside the FOR Loop, perform a single Update DML statement. 
+   update contactsToUpdate;
+}
+						</code></pre>
+					</section>
+					<section>
+						<h2>Removing SOQL from For Loops Cheat Sheet</h2>
+						<p><a href="https://developer.salesforce.com/page/Best_Practice:_Avoid_SOQL_Queries_Inside_FOR_Loops">Avoid SOQL Queries Inside FOR Loops</a></p>
+					</section>
+					<section>
+						<h2>No Logic inside Triggers</h2>
+						<p>Makes unit testing much easier</p>
+						<p>Keeps your codebase DRY</p>
+					</section>
+					<section>
+						<h2>Don't Do This!</h2>
+						<pre><code data-trim contenteditable>
+trigger updateContactOtherAddress on Account(after insert, after update) {  
+    if (trigger.isUpdate) {
+        //Identify Account Address Changes
+        Set<Id> setAccountAddressChangedIds = new Set<Id>();
+
+        for (Account oAccount : trigger.new) {
+            Account oOldAccount = trigger.oldMap.get(oAccount.Id);
+
+            boolean bIsChanged = (oAccount.BillingStreet != oOldAccount.BillingStreet || oAccount.BillingCity != oOldAccount.BillingCity);
+            if (bIsChanged) {
+                setAccountAddressChangedIds.add(oAccount.Id);
+            }
+        }
+
+        //If any, get contacts associated with each account
+        if (setAccountAddressChangedIds.isEmpty() == false) {
+            List<Contact> listContacts = [SELECT Id, AccountId FROM Contact WHERE AccountId IN :setAccountAddressChangedIds];
+            for (Contact oContact : listContacts) {
+                //Get Account
+                oAccount = trigger.newMap.get(oContact.AccountId);
+
+                //Set Address
+                oContact.OtherStreet = oAccount.BillingStreet;
+                oContact.OtherCity = oAccount.BillingCity;
+                oContact.OtherState = oAccount.BillingState;
+                oContact.OtherPostalCode = oAccount.BillingPostalCode;
+            }
+
+            //If any, execute DML command to save contact addresses
+            if (listContacts.isEmpty() == false) {
+                update listContacts;
+            }
+        }
+    }
+}
+						</code></pre>
+					</section>
+					<section>
+						<h2>Much Cleaner</h2>
+						<pre><code data-trim contenteditable>
+trigger AccountBeforeEventListener on Account (before insert, before update) {  
+    if (trigger.isInsert) {
+        AccountUtil.setDefaultValues(trigger.new);
+        AccountUtil.setIndustryCode(trigger.new);
+    }
+}
+						</code></pre>
+						<pre><code data-trim contenteditable>
+public class AccountUtil {  
+    public static void setDefaultValues(List<Account> listAccounts) {
+        for (Account oAccount : listAccounts) {
+            if (oAccount.Industry == null) {
+                oAccount.Industry = ‘Cloud Computing’;
+            }
+        }
+    }
+
+    public static void setIndustryCode(List<Account> listAccounts) {
+        for (Account oAccount : listAccounts) {
+            if (oAccount.Industry == ‘Cloud Computing’) {
+                oAccount.Industry_Code__c = ‘CC’;
+            }
+        }
+    }
+}
+						</code></pre>
+					</section>
+					<section>
+					<h2>Removing Logic from Triggers Cheat Sheet</h2>
+					<p><a href="http://www.iterativelogic.com/salesforce-apex-trigger-best-practices/">Apex Trigger Best Practices: Ignorant Triggers</a></p>
+					</section>
+					<section>
+						<h2>Centralized Framework</h2>
+						<p>No more:
+						<ul>
+							<li>Order of Execution Woes</li>
+							<li>Recursion Scares</li>
+							<li>Spaghetti Code</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Options</h2>
+						<ul>
+							<li><a href="https://github.com/kevinohara80/sfdc-trigger-framework">Kevin O'Hara's Repo</a></li>
+							<li><a href="http://developer.force.com/cookbook/recipe/trigger-pattern-for-tidy-streamlined-bulkified-triggers">Tony Scott's Trigger Pattern Recipe</a></li>
+							<li><a href="https://code.google.com/p/apex-trigger-architecture-framework/">Hari Krishnan's Project</a></li>
+							<li><a href="https://github.com/scottbcovert/Centralized-Salesforce-Dev-Framework">Dan Appleman's Concepts + Hari Krishnan's Project</a></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Centralized Framework Cheat Sheet</h2>
+						<p><a href="https://developer.salesforce.com/page/Trigger_Frameworks_and_Apex_Trigger_Best_Practices">Trigger Frameworks</a></p>
+						<img src="http://s2.quickmeme.com/img/4f/4f329f2c7788f8eb55a7c6c3bc72f27c34996b25d2e4d3899cc270e8f00fe616.jpg"/>
+					</section>
+					<section>
+						<h2>Clicks Not Code</h2>
+						<img height="400px" src="http://cdn.meme.am/instances/500x/57314070.jpg"/>
+						<img src="http://cdn.meme.am/instances/500x/55352788.jpg"/>
+					</section>
 				</section>
 
 				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
+					<h2>Next Steps</h2>
+					<img src="http://cdn.meme.am/instances/500x/59334291.jpg"/>
 				</section>
 
 				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
+					<img src="http://m.memegen.com/wsyb2z.jpg"/>
 				</section>
-
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							<tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							<tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							<tr>
-						</tbody>
-					</table>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
-
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
-
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
-
-				<section>
-					<h2>Much more</h2>
-					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
-					</ul>
-				</section>
-
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
-				</section>
-
 			</div>
 
 		</div>
@@ -389,7 +358,7 @@ Reveal.addEventListener( 'customevent', function() {
 				history: true,
 				center: true,
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
 
 				// Optional reveal.js plugins
 				dependencies: [
