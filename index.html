@@ -131,7 +131,7 @@ trigger accountTestTrggr on Account (before insert, before update) {
    //But if more than 1 Account initiated this trigger, those additional records
    //will not be processed
    Account acct = Trigger.new[0];
-   List<Contact> contacts = [select id, salutation, firstname, lastname, email 
+   List&lt;Contact&gt; contacts = [select id, salutation, firstname, lastname, email 
               from Contact where accountId = :acct.Id];
    
 }
@@ -142,7 +142,7 @@ trigger accountTestTrggr on Account (before insert, before update) {
 					<pre><code data-trim contenteditable>
 trigger accountTestTrggr on Account (before insert, before update) {
 
-   List<String> accountNames = new List<String>{};
+   List&lt;String&gt; accountNames = new List&lt;String&gt;{};
  
    //Loop through all records in the Trigger.new collection
    for(Account a: Trigger.new){
@@ -174,7 +174,7 @@ trigger accountTestTrggr on Account (before insert, before update) {
       	    with more than 20 records, the trigger will exceed the trigger governor limit
             of maximum 20 SOQL Queries.
       	  */
-      	  List<Contact> contacts = [select id, salutation, firstname, lastname, email 
+      	  List&lt;Contact&gt; contacts = [select id, salutation, firstname, lastname, email 
                         from Contact where accountId = :a.Id];
  		  
  	  for(Contact c: contacts){
@@ -200,11 +200,11 @@ trigger accountTestTrggr on Account (before insert, before update) {
 trigger accountTestTrggr on Account (before insert, before update) {
   //This queries all Contacts related to the incoming Account records in a single SOQL query.
   //This is also an example of how to use child relationships in SOQL
-  List<Account> accountsWithContacts = [select id, name, (select id, salutation, description, 
+  List&lt;Account&gt; accountsWithContacts = [select id, name, (select id, salutation, description, 
                                                                 firstname, lastname, email from Contacts) 
                                                                 from Account where Id IN :Trigger.newMap.keySet()];
 	  
-  List<Contact> contactsToUpdate = new List<Contact>{};
+  List&lt;Contact&gt; contactsToUpdate = new List&lt;Contact&gt;{};
   // For loop to iterate through all the queried Account records 
   for(Account a: accountsWithContacts){
      // Use the child relationships dot syntax to access the related Contacts
@@ -235,7 +235,7 @@ trigger accountTestTrggr on Account (before insert, before update) {
 trigger updateContactOtherAddress on Account(after insert, after update) {  
     if (trigger.isUpdate) {
         //Identify Account Address Changes
-        Set<Id> setAccountAddressChangedIds = new Set<Id>();
+        Set&lt;Id&gt; setAccountAddressChangedIds = new Set&lt;Id&gt;();
 
         for (Account oAccount : trigger.new) {
             Account oOldAccount = trigger.oldMap.get(oAccount.Id);
@@ -248,7 +248,7 @@ trigger updateContactOtherAddress on Account(after insert, after update) {
 
         //If any, get contacts associated with each account
         if (setAccountAddressChangedIds.isEmpty() == false) {
-            List<Contact> listContacts = [SELECT Id, AccountId FROM Contact WHERE AccountId IN :setAccountAddressChangedIds];
+            List&lt;Contact&gt; listContacts = [SELECT Id, AccountId FROM Contact WHERE AccountId IN :setAccountAddressChangedIds];
             for (Contact oContact : listContacts) {
                 //Get Account
                 oAccount = trigger.newMap.get(oContact.AccountId);
@@ -281,7 +281,7 @@ trigger AccountBeforeEventListener on Account (before insert, before update) {
 						</code></pre>
 						<pre><code data-trim contenteditable>
 public class AccountUtil {  
-    public static void setDefaultValues(List<Account> listAccounts) {
+    public static void setDefaultValues(List&lt;Account&gt; listAccounts) {
         for (Account oAccount : listAccounts) {
             if (oAccount.Industry == null) {
                 oAccount.Industry = ‘Cloud Computing’;
@@ -289,7 +289,7 @@ public class AccountUtil {
         }
     }
 
-    public static void setIndustryCode(List<Account> listAccounts) {
+    public static void setIndustryCode(List&lt;Account&gt; listAccounts) {
         for (Account oAccount : listAccounts) {
             if (oAccount.Industry == ‘Cloud Computing’) {
                 oAccount.Industry_Code__c = ‘CC’;
